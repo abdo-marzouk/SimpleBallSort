@@ -58,6 +58,8 @@ while TubesLocked < NoOfTubes-1:
                         TubesLocked += 1
     except ValueError:
         print("Invalid source/destination! Please try again.")
+    except IndexError:
+        print("Invalid source/destination! Please try again.")
 for i in range(NoOfTubes):
     DrawTube(" ".join(map(str,AllTubes[i])),i+1)
 print("Congrats! You Won!")
