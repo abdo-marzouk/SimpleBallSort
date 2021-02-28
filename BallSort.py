@@ -3,9 +3,9 @@ class MyNewStack(deque):
     isLocked = bool
 import itertools
 import random
-print("""Welcome to the tube game!
-The goal of the game is to make all tubes have 4 of the same number
-The max number of numbers a tube can fit is 4! Give it a try!
+print("""Welcome to the ball sort game!
+The goal of the game is to make all tubes have 4 of the same number or "ball"
+The max number of "Balls" a tube can fit is 4! Give it a try!
 Before every tube there is a number. You can move the rightmost number from one tube to the other.
 To move a number, enter the source tube followed by the distnation tube separted by a space!""")
 try:
