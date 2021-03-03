@@ -1,17 +1,20 @@
 from collections import deque
+import time
 class MyNewStack(deque):
     isLocked = bool
 import itertools
 import random
-print("""Welcome to the ball sort game!
-The goal of the game is to make all tubes have 4 of the same number or "ball"
-The max number of "Balls" a tube can fit is 4! Give it a try!
+print("""Welcome to the tube game!
+The goal of the game is to make all tubes have 4 of the same number
+The max number of numbers a tube can fit is 4! Give it a try!
 Before every tube there is a number. You can move the rightmost number from one tube to the other.
 To move a number, enter the source tube followed by the distnation tube separted by a space!""")
 try:
     NoOfTubes = int(input("Please enter the number of tubes you wish to play with (3 to 8): "))
+    StartTime = time.time()
 except:
     NoOfTubes = 3
+    StartTime = time.time()
 Tube1 = MyNewStack()
 Tube2 = MyNewStack()
 Tube3 = MyNewStack()
@@ -63,3 +66,5 @@ while TubesLocked < NoOfTubes-1:
 for i in range(NoOfTubes):
     DrawTube(" ".join(map(str,AllTubes[i])),i+1)
 print("Congrats! You Won!")
+X = "{0:.3f}".format(time.time() - StartTime)
+print(f"You took {X} seconds!")
